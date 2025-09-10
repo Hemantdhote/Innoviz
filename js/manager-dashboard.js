@@ -1,6 +1,6 @@
 // === Sidebar toggle (mobile) ===
 const sidebar = document.getElementById("sidebar");
-const burger  = document.getElementById("hamburger");
+const burger = document.getElementById("hamburger");
 burger.addEventListener("click", () => {
   sidebar.classList.toggle("open");
 });
@@ -10,7 +10,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 // === Simple page switching (works for nav + cards) ===
 const navButtons = document.querySelectorAll(".nav-item");
-const pages      = document.querySelectorAll("[data-page]");
+const pages = document.querySelectorAll("[data-page]");
 
 function openPage(pageId) {
   // highlight active button

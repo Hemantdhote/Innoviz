@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>INNOVIZ · AI Assistant</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -68,8 +68,25 @@
 
     <!-- Welcome + Quick Actions -->
     <section class="welcome" data-page="home">
-       <h1>Ask Your <span class="accent">AI Assitsant</span></h1>
-      <p class="subtitle">It will help you to configure</p>
+      <div class="modelDrop">
+        <div>
+          <h1>Ask Your <span class="accent">AI Assitsant</span></h1>
+          <p class="subtitle">It will help you to configure</p>
+        </div>
+        <div class="subtitle">
+          <label for="city">Model In Use:</label>
+        <select class="subtitle" id="city" name="city">
+          <option class="subtitle" value="">AI 2.0</option>
+          <option class="subtitle" value="delhi">AI 2.0.0</option>
+          <option class="subtitle" value="mumbai">AI 2.0.1</option>
+          <option class="subtitle" value="pune">AI 2.0.2</option>
+          <option class="subtitle" value="bangalore">AI 2.0.3</option>
+        </select>
+        </div>
+      </div>
+
+
+
       <div class="chat-container ">
         <!-- Chat messages -->
         <div class="chat-messages no-scrollbar" id="chatMessages">

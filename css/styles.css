@@ -31,7 +31,7 @@ body {
 }
 
 .logo {
-  color: #F2572B;
+  color: #f2572b;
   margin-bottom: 1rem;
   font-weight: bold;
 }
@@ -65,14 +65,12 @@ body {
   padding: 0.8rem;
   border: none;
   border-radius: 8px;
-  background: #F2572B;
+  background: #f2572b;
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s ease;
 }
-
-
 
 .forgot-link {
   display: block;

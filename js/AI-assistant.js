@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-   const backBtn = document.getElementById('backBtn');
+  const backBtn = document.getElementById('backBtn');
   if (backBtn) {
     backBtn.addEventListener('click', () => {
       // go to previous page in browser history
@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ========== SIDEBAR / NAV HANDLERS ========== */
-  const sidebar   = document.getElementById('sidebar');
-  const burger    = document.getElementById('hamburger');
-  const closeBtn  = document.getElementById('closeSidebar');
+  const sidebar = document.getElementById('sidebar');
+  const burger = document.getElementById('hamburger');
+  const closeBtn = document.getElementById('closeSidebar');
 
   // Hamburger toggles open/close
   if (burger && sidebar) {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navButtons = document.querySelectorAll('.nav-item');
   const pages = document.querySelectorAll('[data-page]');
 
-  function openPage(pageId){
+  function openPage(pageId) {
     navButtons.forEach(b => b.classList.toggle('active', b.dataset.page === pageId));
     pages.forEach(sec => {
       const isTarget = sec.dataset.page === pageId;
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Simulate bot response after 1s
         setTimeout(() => {
-          addMessage('This will be response for your prompt' , 'bot');
+          addMessage('This will be response for your prompt', 'bot');
         }, 1000);
       }
     });

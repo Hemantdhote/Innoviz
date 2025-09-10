@@ -1,8 +1,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-  const sidebar   = document.getElementById('sidebar');
-  const burger    = document.getElementById('hamburger');
-  const closeBtn  = document.getElementById('closeSidebar');
+  const sidebar = document.getElementById('sidebar');
+  const burger = document.getElementById('hamburger');
+  const closeBtn = document.getElementById('closeSidebar');
 
   // Hamburger toggles open/close
   if (burger && sidebar) {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navButtons = document.querySelectorAll('.nav-item');
   const pages = document.querySelectorAll('[data-page]');
 
-  function openPage(pageId){
+  function openPage(pageId) {
     navButtons.forEach(b => b.classList.toggle('active', b.dataset.page === pageId));
     pages.forEach(sec => {
       const isTarget = sec.dataset.page === pageId;
