@@ -210,7 +210,7 @@ body {
 /* Welcome + cards */
 .welcome,
 .page {
-  padding: 90px clamp(12px, 2vw, 28px) 1.25rem; /* top padding ≈ navbar height */
+  padding: 69px clamp(12px, 2vw, 28px) 1.25rem; /* top padding ≈ navbar height */
 }
 .welcome h1 {
   font-size: 1.9rem;
