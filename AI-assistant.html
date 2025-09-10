@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/AI-assistant.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <!-- App Shell -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+
+      <span class="in-logo">INNOVIZ</span>
+      <button class="close-btn" id="closeSidebar">×</button>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-item active" data-page="home">
+        <span class="icon"><i class="ri-dashboard-line"></i></span> <span>Saved Prompts</span>
+      </button>
+      <button class="nav-item" data-page="init-tech">
+        <span class="icon"><i class="ri-tools-line"></i></span> <span>Saved Output</span>
+      </button>
+      <button class="nav-item" data-page="customize">
+        <span class="icon"><i class="ri-edit-box-line"></i></span> <span>Reset Context</span>
+      </button>
+      <button class="nav-item" data-page="client-admin">
+        <span class="icon"><i class="ri-line-chart-line"></i></span> <span>Change AI Model</span>
+      </button>
+
+    </nav>
+
+    <div class="sidebar-footer">
+      <!-- <button class="back-btn" id="backBtn">← Back</button> -->
+
+      <a class="logout" href="index.html">← Logout</a>
+
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">☰</button>
+
+
+
+      <div class="top-actions">
+
+        <div class="user">
+          <div class="avatar">A</div>
+          <div class="meta">
+            <span class="name">Admin User</span>
+            <span class="role">System Administrator</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Welcome + Quick Actions -->
+    <section class="welcome" data-page="home">
+       <h1>Ask Your <span class="accent">AI Assitsant</span></h1>
+      <p class="subtitle">It will help you to configure</p>
+      <div class="chat-container ">
+        <!-- Chat messages -->
+        <div class="chat-messages no-scrollbar" id="chatMessages">
+          <!-- Messages will appear here dynamically -->
+        </div>
+
+        <!-- Input area -->
+        <form class="chat-input-area" id="chatForm">
+          <label class="file-upload">
+            <i class="ri-add-line"></i>
+            <!-- fileInput -->
+            <input type="file" id="  " hidden multiple>
+          </label>
+          <input type="text" id="messageInput" placeholder="Ask a question..." required />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Pages (dummy content) -->
+
+    <section class="page" data-page="integrations" hidden>
+      <h2>Integrate Client Systems</h2>
+      <div class="panel grid-2">
+        <label>System Name
+          <input type="text" placeholder="Salesforce / SAP / Slack" />
+        </label>
+        <label>API Key
+          <input type="text" placeholder="Paste API key" />
+        </label>
+        <label>Webhook URL
+          <input type="url" placeholder="https://example.com/webhook" />
+        </label>
+        <label>Status
+          <select>
+            <option>Not Connected</option>
+            <option>Connected</option>
+            <option>Error</option>
+          </select>
+        </label>
+        <button class="primary span-2">Connect System</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> INNOVIZ. All rights reserved.</span>
+    </footer>
+  </main>
+
+  <script src="js/AI-assistant.js"></script>
+</body>
+
+</html>

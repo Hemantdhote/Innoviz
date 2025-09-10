@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INNOVIZ · Admin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/admin-dashboard.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- App Shell -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <span>INNOVIZ</span>
+      <button class="close-btn" id="closeSidebar">×</button>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-item active" data-page="home">
+        <span class="icon"><i class="ri-dashboard-line"></i></span> <span>Dashboard</span>
+      </button>
+      <button class="nav-item" data-page="init-tech">
+        <span class="icon"><i class="ri-tools-line"></i></span> <span>Initialize Technical Parameters</span>
+      </button>
+      <button class="nav-item" data-page="customize">
+        <span class="icon"><i class="ri-instance-line"></i></span> <span>Customize Client Instance</span>
+      </button>
+      <button class="nav-item" data-page="client-admin">
+        <span class="icon"><i class="ri-edit-box-line"></i></span> <span>Create Client Admin</span>
+      </button>
+      <button class="nav-item" data-page="master-prompts">
+        <span class="icon setup"><i class="ri-ai-generate-text"></i></span> <span>Setup Master Prompts</span>
+      </button>
+      <button class="nav-item" data-page="integrations">
+        <span class="icon"><i class="ri-code-ai-line"></i></span> <span>Integrate Client Systems</span>
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a class="logout" href="index.html">← Logout</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">☰</button>
+
+
+
+      <div class="top-actions">
+
+        <div class="user">
+          <div class="avatar">A</div>
+          <div class="meta">
+            <span class="name">Admin User</span>
+            <span class="role">System Administrator</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Welcome + Quick Actions -->
+    <section class="welcome" data-page="home">
+      <h1>Welcome, <span class="accent">Admin User</span></h1>
+      <p class="subtitle">Configure your client environment</p>
+
+      <div class="card-grid" id="quickActions">
+        <article class="card">
+          <div class="card-icon"><i class="ri-tools-line"></i></div>
+          <p class="cardHead">Initialize Technical Parameters</p>
+          <p class="cardSubHead">Set up top system’s parameters</p>
+          <button class="ghost-btn" data-open="init-tech">Open →</button>
+        </article>
+
+        <article class="card">
+          <div class="card-icon"><i class="ri-instance-line"></i></div>
+          <p class="cardHead">Customize Client Instance</p>
+          <p class="cardSubHead">Customize settings for client</p>
+          <button class="ghost-btn" data-open="customize">Open →</button>
+        </article>
+
+        <article class="card">
+          <div class="card-icon"><i class="ri-edit-box-line"></i></div>
+          <p class="cardHead">Create Client Admin</p>
+          <p class="cardSubHead">Create administrator account</p>
+          <button class="ghost-btn" data-open="client-admin">Open →</button>
+        </article>
+
+        <article class="card">
+          <div class="card-icon"><i class="ri-ai-generate-text"></i></div>
+          <p class="cardHead">Setup Master Prompts</p>
+          <p class="cardSubHead">Integrate prompts for different phases</p>
+          <button class="ghost-btn" data-open="master-prompts">Open →</button>
+        </article>
+
+        <article class="card">
+          <div class="card-icon"><i class="ri-code-ai-line"></i></div>
+          <p class="cardHead">Integrate Client Systems</p>
+          <p class="cardSubHead">Integrate systems within enterprise</p>
+          <button class="ghost-btn" data-open="integrations">Open →</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Pages (dummy content) -->
+    <section class="page" data-page="init-tech" hidden>
+      <h2>Initialize Technical Parameters</h2>
+      <div class="panel">
+        <label>System Mode
+          <select>
+            <option>Standard</option>
+            <option>High-Performance</option>
+            <option>Energy Saver</option>
+          </select>
+        </label>
+        <label>Concurrency
+          <input type="number" placeholder="e.g., 8" />
+        </label>
+        <label>Timeout (ms)
+          <input type="number" placeholder="e.g., 30000" />
+        </label>
+        <button class="primary">Save Parameters</button>
+      </div>
+    </section>
+
+    <section class="page" data-page="customize" hidden>
+      <h2>Customize Client Instance</h2>
+      <div class="panel grid-2">
+        <label>Instance Name
+          <input type="text" placeholder="Client ACME North" />
+        </label>
+        <label>Theme Color
+          <input type="color" value="#009688" />
+        </label>
+        <label>Region
+          <select>
+            <option>US</option>
+            <option>EU</option>
+            <option>APAC</option>
+          </select>
+        </label>
+        <label>Feature Flags
+          <input type="text" placeholder="beta, audit, insights" />
+        </label>
+        <button class="primary span-2">Save Customization</button>
+      </div>
+    </section>
+
+    <section class="page" data-page="client-admin" hidden>
+      <h2>Create Client Admin</h2>
+      <div class="panel grid-2">
+        <label>Admin Name
+          <input type="text" placeholder="Jane Doe" />
+        </label>
+        <label>Email
+          <input type="email" placeholder="jane@example.com" />
+        </label>
+        <label>Password
+          <input type="password" placeholder="••••••••" />
+        </label>
+        <label>Role
+          <select>
+            <option>Owner</option>
+            <option>Admin</option>
+            <option>Editor</option>
+          </select>
+        </label>
+        <button class="primary span-2">Create Admin</button>
+      </div>
+    </section>
+
+    <section class="page" data-page="master-prompts" hidden>
+
+      <div class="buildModal">
+        <div class="leftside">
+          <div>
+            <header class="header">
+              <h2>Setup Master Prompts</h2>
+              <!-- <a href="#" class="link">Previously built models</a> -->
+            </header>
+          </div>
+
+          <div class="adjustData">
+            <div class="panel">
+              <label>Phase
+                <select>
+                  <option>Discover</option>
+                  <option>Diagnose</option>
+                  <option>Develop</option>
+                </select>
+              </label>
+              <label>Prompt Text
+                <textarea rows="5" placeholder="Write the master prompt…"></textarea>
+              </label>
+              <button class="primary">Save Prompt</button>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="card buildAICart rightside doc">
+          <p class="data">Prompts List</p>
+          <ul class="doc-list no-scrollbar">
+            <li> Create a minimalist logo for a tech startup. </li>
+            <li> Create a minimalist logo for a tech startup. </li>
+            <li> Create a minimalist logo for a tech startup. </li>
+            <li> Create a minimalist logo for a tech startup. </li>
+            <li> Create a minimalist logo for a tech startup. </li>
+            <li> Create a minimalist logo for a tech startup. </li>
+            <li> Create a minimalist logo for a tech startup. </li>
+            <li> Create a minimalist logo for a tech startup. </li>
+            <li> Create a minimalist logo for a tech startup. </li>
+            <li> Create a minimalist logo for a tech startup. </li>
+            <li> Create a minimalist logo for a tech startup. </li>
+            <li> Create a minimalist logo for a tech startup. </li>
+          </ul>
+          <button class="add-btn">+ Add New</button>
+        </div>
+      </div>
+
+
+
+
+      <!-- <div class="buildModal">
+        <div class="leftside">
+
+          <h2>Setup Master Prompts</h2>
+          <div class="panel">
+            <label>Phase
+              <select>
+                <option>Discover</option>
+                <option>Diagnose</option>
+                <option>Develop</option>
+              </select>
+            </label>
+            <label>Prompt Text
+              <textarea rows="5" placeholder="Write the master prompt…"></textarea>
+            </label>
+            <button class="primary">Save Prompt</button>
+          </div>
+
+
+
+
+        </div>
+
+        <div class="rightside">
+          <p class="data">Prompts List</p>
+          <div class=" buildAICart  doc">
+            <ul class="doc-list">
+              <li><span></span> Summarize this article in 3 bullet points.</li>
+              <li><span></span> Rewrite this paragraph in simpler language</li>
+              <li><span></span> Give me 5 creative marketing ideas for a small bakery.</li>
+              <li><span></span> Suggest 10 catchy names for a mobile fitness app.</li>
+              <li><span></span> Explain the concept of blockchain as if I’m 12 years old.</li>
+              <li><span></span> Make a 5-slide outline for a presentation on climate change.</li>
+              <li><span></span> Give me 5 creative marketing ideas for a small bakery.</li>
+              <li><span></span> Suggest 10 catchy names for a mobile fitness app.</li>
+              <li><span></span> Explain the concept of blockchain as if I’m 12 years old.</li>
+              <li><span></span> Make a 5-slide outline for a presentation on climate change.</li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div> -->
+    </section>
+
+    <section class="page" data-page="integrations" hidden>
+      <h2>Integrate Client Systems</h2>
+      <div class="panel grid-2">
+        <label>System Name
+          <input type="text" placeholder="Salesforce / SAP / Slack" />
+        </label>
+        <label>API Key
+          <input type="text" placeholder="Paste API key" />
+        </label>
+        <label>Webhook URL
+          <input type="url" placeholder="https://example.com/webhook" />
+        </label>
+        <label>Status
+          <select>
+            <option>Not Connected</option>
+            <option>Connected</option>
+            <option>Error</option>
+          </select>
+        </label>
+        <button class="primary span-2">Connect System</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> INNOVIZ. All rights reserved.</span>
+    </footer>
+  </main>
+
+  <script src="js/admin-dashboard.js"></script>
+</body>
+
+</html>

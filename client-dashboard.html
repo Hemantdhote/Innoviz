@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INNOVIZ · Client Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/client-dashboard.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <!-- App Shell -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+
+      <span class="in-logo">INNOVIZ</span>
+      <button class="close-btn" id="closeSidebar">×</button>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-item active" data-page="home">
+        <span class="icon"><i class="ri-dashboard-line"></i></span> <span>Dashboard</span>
+      </button>
+      <button class="nav-item" data-page="init-tech">
+        <span class="icon"><i class="ri-tools-line"></i></span> <span>Manage Users & Permissions</span>
+      </button>
+      <button class="nav-item" data-page="customize">
+        <span class="icon"><i class="ri-edit-box-line"></i></span> <span>Create Project</span>
+      </button>
+      <button class="nav-item" data-page="client-admin">
+        <span class="icon"><i class="ri-line-chart-line"></i></span> <span>Data Sources & categories</span>
+      </button>
+      <button class="nav-item" data-page="master-prompts">
+        <span class="icon"><i class="ri-robot-3-line"></i></span> <span>Build AI Model</span>
+      </button>
+      <button class="nav-item" data-page="integrations">
+        <span class="icon"><i class="ri-archive-line"></i></span> <span>Assign Users Archive Projects</span>
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a class="logout" href="index.html">← Logout</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">☰</button>
+
+
+
+      <div class="top-actions">
+
+        <div class="user">
+          <div class="avatar">A</div>
+          <div class="meta">
+            <span class="name">Admin User</span>
+            <span class="role">System Administrator</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Welcome + Quick Actions -->
+    <section class="welcome" data-page="home">
+      <h1>Welcome, <span class="accent">Client User</span></h1>
+      <p class="subtitle">Configure your client environment</p>
+
+      <div class="card-grid" id="quickActions">
+        <article class="nav-item card" data-page="init-tech">
+          <div class="card-icon"><i class="ri-tools-line"></i></div>
+          <p>Manage Users & Permissions</p>
+
+        </article>
+
+        <article class="nav-item card" data-page="customize">
+          <div class="card-icon"><i class="ri-menu-search-line"></i></div>
+          <p>Specify Category, Markets, Compitteters</p>
+
+        </article>
+
+        <article class="nav-item card" data-page="client-admin">
+          <div class="card-icon"><i class="ri-edit-box-line"></i></div>
+          <p>Create Client Admin</p>
+
+        </article>
+
+        <article class="nav-item card" data-page="master-prompts">
+          <div class="card-icon"><i class="ri-robot-3-line"></i></div>
+          <p>Build AI Model</p>
+
+        </article>
+
+        <article class="nav-item card" data-page="integrations">
+          <div class="card-icon"><i class="ri-user-shared-line"></i></div>
+          <p>Assign Users To Project</p>
+
+        </article>
+        <article class="nav-item card" data-page="integrations">
+          <div class="card-icon"><i class="ri-folder-close-line"></i></div>
+          <p>Close Project</p>
+
+        </article>
+        <article class="nav-item card" data-page="integrations">
+          <div class="card-icon"><i class="ri-archive-line"></i></div>
+          <p>Archive Project</p>
+
+        </article>
+        </article>
+        <article class="nav-item card" data-page="integrations">
+          <div class="card-icon"><i class="ri-archive-drawer-line"></i></div>
+          <p>Archive Project And Related Data</p>
+
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Pages (dummy content) -->
+    <section class="page" data-page="init-tech" hidden>
+      <h2>Initialize Technical Parameters</h2>
+      <div class="panel">
+        <label>System Mode
+          <select>
+            <option>Standard</option>
+            <option>High-Performance</option>
+            <option>Energy Saver</option>
+          </select>
+        </label>
+        <label>Concurrency
+          <input type="number" placeholder="e.g., 8" />
+        </label>
+        <label>Timeout (ms)
+          <input type="number" placeholder="e.g., 30000" />
+        </label>
+        <button class="primary">Save Parameters</button>
+      </div>
+    </section>
+
+    <section class="page" data-page="customize" hidden>
+      <h2>Customize Client Instance</h2>
+      <div class="panel grid-2">
+        <label>Instance Name
+          <input type="text" placeholder="Client ACME North" />
+        </label>
+        <label>Theme Color
+          <input type="color" value="#009688" />
+        </label>
+        <label>Region
+          <select>
+            <option>US</option>
+            <option>EU</option>
+            <option>APAC</option>
+          </select>
+        </label>
+        <label>Feature Flags
+          <input type="text" placeholder="beta, audit, insights" />
+        </label>
+        <button class="primary span-2">Save Customization</button>
+      </div>
+    </section>
+
+    <section class="page" data-page="client-admin" hidden>
+      <h2>Create Client Admin</h2>
+      <div class="panel grid-2">
+        <label>Admin Name
+          <input type="text" placeholder="Jane Doe" />
+        </label>
+        <label>Email
+          <input type="email" placeholder="jane@example.com" />
+        </label>
+        <label>Password
+          <input type="password" placeholder="••••••••" />
+        </label>
+        <label>Role
+          <select>
+            <option>Owner</option>
+            <option>Admin</option>
+            <option>Editor</option>
+          </select>
+        </label>
+        <button class="primary span-2">Create Admin</button>
+      </div>
+    </section>
+
+    <section class="page" data-page="master-prompts" hidden>
+      <div class="buildModal">
+        <div class="leftside">
+          <div>
+            <header class="header">
+              <h2>Build your custom AI Model</h2>
+              <a href="#" class="link">Previously built models</a>
+            </header>
+
+            <div class="model-name">
+              <input type="text" placeholder="Model Name">
+              
+            </div>
+            <div class="builtBtnContainer">
+            <button class="modelbtn rightalignbutton">Built Model</button>
+            </div>
+          </div>
+
+          <div class="adjustData">
+
+            <h4 class="data">Select Your Data</h4>
+            <div class="" id="quickActions">
+              <div class="card buildAICart">
+                <p class="enterprise">Enterprise Systems Connections</p>
+                <div class="systems systemText">
+                  <div class="ico-box"><svg class="sap-logo" xmlns="http://www.w3.org/2000/svg" role="img"
+                      viewBox="0 0 24 24">
+                      <title>Salesforce</title>
+                      <path
+                        d="M10.006 5.415a4.195 4.195 0 013.045-1.306c1.56 0 2.954.9 3.69 2.205.63-.3 1.35-.45 2.1-.45 2.85 0 5.159 2.34 5.159 5.22s-2.31 5.22-5.176 5.22c-.345 0-.69-.044-1.02-.104a3.75 3.75 0 01-3.3 1.95c-.6 0-1.155-.15-1.65-.375A4.314 4.314 0 018.88 20.4a4.302 4.302 0 01-4.05-2.82c-.27.062-.54.076-.825.076-2.204 0-4.005-1.8-4.005-4.05 0-1.5.811-2.805 2.01-3.51-.255-.57-.39-1.2-.39-1.846 0-2.58 2.1-4.65 4.65-4.65 1.53 0 2.85.705 3.72 1.8" />
+                    </svg>
+                    Salesforce</div>
+                  <div class="ico-box"><svg class="sap-logo" xmlns="http://www.w3.org/2000/svg" role="img"
+                      viewBox="0 0 24 24">
+                      <title>SAP</title>
+                      <path
+                        d="M0 6.064v11.872h12.13L24 6.064zm3.264 2.208h.005c.863.001 1.915.245 2.676.633l-.82 1.43c-.835-.404-1.255-.442-1.73-.467-.708-.038-1.064.215-1.069.488-.007.332.669.633 1.305.838.964.306 2.19.715 2.377 1.9L7.77 8.437h2.046l2.064 5.576-.007-5.575h2.37c2.257 0 3.318.764 3.318 2.519 0 1.575-1.09 2.514-2.936 2.514h-.763l-.01 2.094-3.588-.003-.25-.908c-.37.122-.787.189-1.23.189-.456 0-.885-.071-1.263-.2l-.358.919-2 .006.09-.462c-.029.025-.057.05-.087.074-.535.43-1.208.629-2.037.644l-.213.002a5.075 5.075 0 0 1-2.581-.675l.73-1.448c.79.467 1.286.572 1.956.558.347-.007.598-.07.761-.239a.557.557 0 0 0 .156-.369c.007-.376-.53-.553-1.185-.756-.531-.164-1.135-.389-1.606-.735-.559-.41-.825-.924-.812-1.65a1.99 1.99 0 0 1 .566-1.377c.519-.537 1.357-.863 2.363-.863zm10.597 1.67v1.904h.521c.694 0 1.247-.23 1.248-.964 0-.709-.554-.94-1.248-.94zm-5.087.767l-.748 2.362c.223.085.481.133.757.133.268 0 .52-.047.742-.126l-.736-2.37z" />
+                    </svg> SAP S/4HANA
+                  </div>
+                  <div class="ico-box"><svg class="sap-logo" xmlns="http://www.w3.org/2000/svg" role="img"
+                      viewBox="0 0 24 24">
+                      <title>Snowflake</title>
+                      <path
+                        d="M24 3.459c0 .646-.418 1.18-1.141 1.18-.723 0-1.142-.534-1.142-1.18 0-.647.419-1.18 1.142-1.18.723 0 1.141.533 1.141 1.18zm-.228 0c0-.533-.38-.951-.913-.951s-.913.38-.913.95c0 .533.38.952.913.952.57 0 .913-.419.913-.951zm-1.37-.533h.495c.266 0 .456.152.456.38 0 .153-.076.229-.19.305l.19.266v.038h-.266l-.19-.266h-.229v.266h-.266zm.495.228h-.229v.267h.229c.114 0 .152-.038.152-.114.038-.077-.038-.153-.152-.153zM7.602 12.4c.038-.151.076-.304.076-.456 0-.114-.038-.228-.038-.342-.114-.343-.304-.647-.646-.838l-4.87-2.777c-.685-.38-1.56-.152-1.94.533-.381.685-.153 1.56.532 1.94l2.701 1.56-2.701 1.56c-.685.38-.913 1.256-.533 1.94.38.685 1.256.914 1.94.533l4.832-2.777c.343-.267.571-.533.647-.876zm1.332 2.626c-.266-.038-.57.038-.837.19l-4.832 2.777c-.685.38-.913 1.256-.532 1.94.38.686 1.255.914 1.94.533l2.701-1.56v3.12c0 .8.647 1.408 1.446 1.408.799 0 1.407-.647 1.407-1.408v-5.592c0-.761-.57-1.37-1.293-1.408zm4.946-6.088c.266.038.57-.038.837-.19l4.832-2.777c.685-.38.913-1.256.532-1.94-.38-.686-1.255-.914-1.94-.533l-2.701 1.56V1.975c0-.799-.647-1.408-1.446-1.408-.799 0-1.446.609-1.446 1.408V7.53c0 .76.609 1.37 1.332 1.407zM3.265 5.97l4.832 2.777c.266.152.533.19.837.19.723-.038 1.331-.684 1.331-1.407V1.975c0-.799-.646-1.408-1.407-1.408-.799 0-1.446.647-1.446 1.408v3.12l-2.701-1.56c-.685-.38-1.56-.152-1.94.533-.419.646-.19 1.521.494 1.902zm9.093 6.011a.412.412 0 00-.114-.266l-.57-.571a.346.346 0 00-.267-.114.412.412 0 00-.266.114l-.571.57a.411.411 0 00-.114.267c0 .076.038.19.114.267l.57.57a.345.345 0 00.267.114c.076 0 .19-.038.266-.114l.571-.57a.412.412 0 00.114-.267zm1.598.533L11.94 14.53c-.039.038-.153.114-.229.114h-.608a.411.411 0 01-.267-.114L8.82 12.514a.408.408 0 01-.076-.229v-.608c0-.076.038-.19.114-.267l2.016-2.016a.41.41 0 01.267-.114h.608a.41.41 0 01.267.114l2.016 2.016a.347.347 0 01.114.267v.608c-.076.077-.114.19-.19.229zm5.593 5.44l-4.832-2.777c-.266-.152-.57-.19-.837-.152-.723.038-1.332.684-1.332 1.408v5.554c0 .8.647 1.408 1.408 1.408.799 0 1.446-.647 1.446-1.408v-3.12l2.7 1.56c.686.38 1.561.152 1.941-.533.419-.646.19-1.521-.494-1.94zm2.549-7.533l-2.701 1.56 2.7 1.56c.686.38.914 1.256.533 1.94-.38.685-1.255.913-1.94.533l-4.832-2.778a1.644 1.644 0 01-.647-.798c-.037-.153-.076-.305-.076-.457 0-.114.039-.228.039-.342.114-.343.342-.647.646-.837l4.832-2.778c.685-.38 1.56-.152 1.94.533.457.609.19 1.484-.494 1.864" />
+                    </svg>
+                    Snowflake</div>
+                  <div class="ico-box"><svg class="sap-logo" xmlns="http://www.w3.org/2000/svg" role="img"
+                      viewBox="0 0 24 24">
+                      <title>Google BigQuery</title>
+                      <path
+                        d="M5.676 10.595h2.052v5.244a5.892 5.892 0 0 1-2.052-2.088v-3.156zm18.179 10.836a.504.504 0 0 1 0 .708l-1.716 1.716a.504.504 0 0 1-.708 0l-4.248-4.248a.206.206 0 0 1-.007-.007c-.02-.02-.028-.045-.043-.066a10.736 10.736 0 0 1-6.334 2.065C4.835 21.599 0 16.764 0 10.799S4.835 0 10.8 0s10.799 4.835 10.799 10.8c0 2.369-.772 4.553-2.066 6.333.025.017.052.028.074.05l4.248 4.248zm-5.028-10.632a8.015 8.015 0 1 0-8.028 8.028h.024a8.016 8.016 0 0 0 8.004-8.028zm-4.86 4.98a6.002 6.002 0 0 0 2.04-2.184v-1.764h-2.04v3.948zm-4.5.948c.442.057.887.08 1.332.072.4.025.8.025 1.2 0V7.692H9.468v9.035z" />
+                    </svg>
+                    BigQuery</div>
+                  <div class="ico-box"><svg class="sap-logo" xmlns="http://www.w3.org/2000/svg" role="img"
+                      viewBox="0 0 24 24">
+                      <title>Microsoft SharePoint</title>
+                      <path
+                        d="M24 13.5q0 1.242-.475 2.332-.474 1.09-1.289 1.904-.814.815-1.904 1.29-1.09.474-2.332.474-.762 0-1.523-.2-.106.997-.557 1.858-.451.862-1.154 1.494-.704.633-1.606.99-.902.358-1.91.358-1.09 0-2.045-.416-.955-.416-1.664-1.125-.709-.709-1.125-1.664Q6 19.84 6 18.75q0-.188.018-.375.017-.188.04-.375H.997q-.41 0-.703-.293T0 17.004V6.996q0-.41.293-.703T.996 6p.54q.14-1.277.726-2.373.586-1.096 1.488-1.904Q7.652.914 8.807.457 9.96 0 11.25 0q1.395 0 2.625.533T16.02 1.98q.914.915 1.447 2.145T18 6.75q0 .188-.012.375-.011.188-.035.375 1.242 0 2.344.469 1.101.468 1.928 1.277.826.809 1.3 1.904Q24 12.246 24 13.5zm-12.75-12q-.973 0-1.857.34-.885.34-1.577.943-.691.604-1.154 1.43Q6.2 5.039 6.06 6h4.945q.41 0 .703.293t.293.703v4.945l.21-.035q.212-.75.61-1.424.399-.673.944-1.218.545-.545 1.213-.944.668-.398 1.43-.61.093-.503.093-.96 0-1.09-.416-2.045-.416-.955-1.125-1.664-.709-.709-1.664-1.125Q12.34 1.5 11.25 1.5zM6.117 15.902q.54 0 1.06-.111.522-.111.932-.37.41-.257.662-.679.252-.422.252-1.055 0-.632-.263-1.054-.264-.422-.662-.703-.399-.282-.856-.463l-.855-.34q-.399-.158-.662-.334-.264-.176-.264-.445 0-.2.14-.323.141-.123.335-.193.193-.07.404-.094.21-.023.351-.023.598 0 1.055.152.457.153.95.457V8.543q-.282-.082-.522-.14-.24-.06-.475-.1-.234-.041-.486-.059-.252-.017-.557-.017-.515 0-1.054.117-.54.117-.979.375-.44.258-.715.68-.275.421-.275 1.03 0 .598.263.997.264.398.663.68.398.28.855.474l.856.363q.398.17.662.358.263.187.263.457 0 .222-.123.351-.123.13-.31.2-.188.07-.393.087-.205.018-.369.018-.703 0-1.248-.234-.545-.235-1.107-.621v1.875q1.195.468 2.472.468zM11.25 22.5q.773 0 1.453-.293t1.19-.803q.51-.51.808-1.195.299-.686.299-1.459 0-.668-.223-1.277-.222-.61-.62-1.096-.4-.486-.95-.826-.55-.34-1.207-.48v1.933q0 .41-.293.703t-.703.293H7.57q-.07.375-.07.75 0 .773.293 1.459t.803 1.195q.51.51 1.195.803.686.293 1.459.293zM18 18q.926 0 1.746-.352.82-.351 1.436-.966.615-.616.966-1.43.352-.815.352-1.752 0-.926-.352-1.746-.351-.82-.966-1.436-.616-.615-1.436-.966Q18.926 9 18 9t-1.74.357q-.815.358-1.43.973t-.973 1.43q-.357.814-.357 1.74 0 .129.006.258t.017.258q.551.27 1.02.65t.838.855q.369.475.627 1.026.258.55.387 1.148Q17.18 18 18 18Z" />
+                    </svg>
+                    SharePoint</div>
+                  <div class="ico-box"><svg class="sap-logo" xmlns="http://www.w3.org/2000/svg" role="img"
+                      viewBox="0 0 24 24">
+                      <title>SAP</title>
+                      <path
+                        d="M0 6.064v11.872h12.13L24 6.064zm3.264 2.208h.005c.863.001 1.915.245 2.676.633l-.82 1.43c-.835-.404-1.255-.442-1.73-.467-.708-.038-1.064.215-1.069.488-.007.332.669.633 1.305.838.964.306 2.19.715 2.377 1.9L7.77 8.437h2.046l2.064 5.576-.007-5.575h2.37c2.257 0 3.318.764 3.318 2.519 0 1.575-1.09 2.514-2.936 2.514h-.763l-.01 2.094-3.588-.003-.25-.908c-.37.122-.787.189-1.23.189-.456 0-.885-.071-1.263-.2l-.358.919-2 .006.09-.462c-.029.025-.057.05-.087.074-.535.43-1.208.629-2.037.644l-.213.002a5.075 5.075 0 0 1-2.581-.675l.73-1.448c.79.467 1.286.572 1.956.558.347-.007.598-.07.761-.239a.557.557 0 0 0 .156-.369c.007-.376-.53-.553-1.185-.756-.531-.164-1.135-.389-1.606-.735-.559-.41-.825-.924-.812-1.65a1.99 1.99 0 0 1 .566-1.377c.519-.537 1.357-.863 2.363-.863zm10.597 1.67v1.904h.521c.694 0 1.247-.23 1.248-.964 0-.709-.554-.94-1.248-.94zm-5.087.767l-.748 2.362c.223.085.481.133.757.133.268 0 .52-.047.742-.126l-.736-2.37z" />
+                    </svg>
+                    ServiceNow</div>
+                  <div class="ico-box"><svg class="sap-logo" xmlns="http://www.w3.org/2000/svg" role="img"
+                      viewBox="0 0 24 24">
+                      <title>Oracle</title>
+                      <path
+                        d="M16.412 4.412h-8.82a7.588 7.588 0 0 0-.008 15.176h8.828a7.588 7.588 0 0 0 0-15.176zm-.193 12.502H7.786a4.915 4.915 0 0 1 0-9.828h8.433a4.914 4.914 0 1 1 0 9.828z" />
+                    </svg> Oracle
+                    Netsuite</div>
+                  <div class="ico-box"><svg class="sap-logo" xmlns="http://www.w3.org/2000/svg" role="img"
+                      viewBox="0 0 24 24">
+                      <title>Amazon AWS</title>
+                      <path
+                        d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 0 1-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 0 1-.287-.375 6.18 6.18 0 0 1-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.295.072-.583.16-.862.272a2.287 2.287 0 0 1-.28.104.488.488 0 0 1-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 0 1 .224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 0 1 1.246-.151c.95 0 1.644.216 2.091.647.439.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.758-.51.128-.152.224-.32.272-.512.047-.191.08-.423.08-.694v-.335a6.66 6.66 0 0 0-.735-.136 6.02 6.02 0 0 0-.75-.048c-.535 0-.926.104-1.19.32-.263.215-.39.518-.39.917 0 .375.095.655.295.846.191.2.47.296.838.296zm6.41.862c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311L7.586 5.55a1.398 1.398 0 0 1-.072-.32c0-.128.064-.2.191-.2h.783c.151 0 .255.025.31.08.065.048.113.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.151-.312a.549.549 0 0 1 .32-.08h.638c.152 0 .256.025.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.52.52 0 0 1 .311-.08h.743c.127 0 .2.065.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 0 1-.056.2l-1.923 6.17c-.048.16-.104.263-.168.311a.51.51 0 0 1-.303.08h-.687c-.151 0-.255-.024-.32-.08-.063-.056-.119-.16-.15-.32l-1.238-5.148-1.23 5.14c-.04.16-.087.264-.15.32-.065.056-.177.08-.32.08zm10.256.215c-.415 0-.83-.048-1.229-.143-.399-.096-.71-.2-.918-.32-.128-.071-.215-.151-.247-.223a.563.563 0 0 1-.048-.224v-.407c0-.167.064-.247.183-.247.048 0 .096.008.144.024.048.016.12.048.2.08.271.12.566.215.878.279.319.064.63.096.95.096.502 0 .894-.088 1.165-.264a.86.86 0 0 0 .415-.758.777.777 0 0 0-.215-.559c-.144-.151-.416-.287-.807-.415l-1.157-.36c-.583-.183-1.014-.454-1.277-.813a1.902 1.902 0 0 1-.4-1.158c0-.335.073-.63.216-.886.144-.255.335-.479.575-.654.24-.184.51-.32.83-.415.32-.096.655-.136 1.006-.136.175 0 .359.008.535.032.183.024.35.056.518.088.16.04.312.08.455.127.144.048.256.096.336.144a.69.69 0 0 1 .24.2.43.43 0 0 1 .071.263v.375c0 .168-.064.256-.184.256a.83.83 0 0 1-.303-.096 3.652 3.652 0 0 0-1.532-.311c-.455 0-.815.071-1.062.223-.248.152-.375.383-.375.71 0 .224.08.416.24.567.159.152.454.304.877.44l1.134.358c.574.184.99.44 1.237.767.247.327.367.702.367 1.117 0 .343-.072.655-.207.926-.144.272-.336.511-.583.703-.248.2-.543.343-.886.447-.36.111-.734.167-1.142.167zM21.698 16.207c-2.626 1.94-6.442 2.969-9.722 2.969-4.598 0-8.74-1.7-11.87-4.526-.247-.223-.024-.527.272-.351 3.384 1.963 7.559 3.153 11.877 3.153 2.914 0 6.114-.607 9.06-1.852.439-.2.814.287.383.607zM22.792 14.961c-.336-.43-2.22-.207-3.074-.103-.255.032-.295-.192-.063-.36 1.5-1.053 3.967-.75 4.254-.399.287.36-.08 2.826-1.485 4.007-.215.184-.423.088-.327-.151.32-.79 1.03-2.57.695-2.994z" />
+                    </svg> AWS S3
+                  </div>
+                  <div class="ico-box"><svg class="sap-logo" xmlns="http://www.w3.org/2000/svg" role="img"
+                      viewBox="0 0 24 24">
+                      <title>Amazon AWS</title>
+                      <path
+                        d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 0 1-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 0 1-.287-.375 6.18 6.18 0 0 1-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.295.072-.583.16-.862.272a2.287 2.287 0 0 1-.28.104.488.488 0 0 1-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 0 1 .224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 0 1 1.246-.151c.95 0 1.644.216 2.091.647.439.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.758-.51.128-.152.224-.32.272-.512.047-.191.08-.423.08-.694v-.335a6.66 6.66 0 0 0-.735-.136 6.02 6.02 0 0 0-.75-.048c-.535 0-.926.104-1.19.32-.263.215-.39.518-.39.917 0 .375.095.655.295.846.191.2.47.296.838.296zm6.41.862c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311L7.586 5.55a1.398 1.398 0 0 1-.072-.32c0-.128.064-.2.191-.2h.783c.151 0 .255.025.31.08.065.048.113.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.151-.312a.549.549 0 0 1 .32-.08h.638c.152 0 .256.025.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.52.52 0 0 1 .311-.08h.743c.127 0 .2.065.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 0 1-.056.2l-1.923 6.17c-.048.16-.104.263-.168.311a.51.51 0 0 1-.303.08h-.687c-.151 0-.255-.024-.32-.08-.063-.056-.119-.16-.15-.32l-1.238-5.148-1.23 5.14c-.04.16-.087.264-.15.32-.065.056-.177.08-.32.08zm10.256.215c-.415 0-.83-.048-1.229-.143-.399-.096-.71-.2-.918-.32-.128-.071-.215-.151-.247-.223a.563.563 0 0 1-.048-.224v-.407c0-.167.064-.247.183-.247.048 0 .096.008.144.024.048.016.12.048.2.08.271.12.566.215.878.279.319.064.63.096.95.096.502 0 .894-.088 1.165-.264a.86.86 0 0 0 .415-.758.777.777 0 0 0-.215-.559c-.144-.151-.416-.287-.807-.415l-1.157-.36c-.583-.183-1.014-.454-1.277-.813a1.902 1.902 0 0 1-.4-1.158c0-.335.073-.63.216-.886.144-.255.335-.479.575-.654.24-.184.51-.32.83-.415.32-.096.655-.136 1.006-.136.175 0 .359.008.535.032.183.024.35.056.518.088.16.04.312.08.455.127.144.048.256.096.336.144a.69.69 0 0 1 .24.2.43.43 0 0 1 .071.263v.375c0 .168-.064.256-.184.256a.83.83 0 0 1-.303-.096 3.652 3.652 0 0 0-1.532-.311c-.455 0-.815.071-1.062.223-.248.152-.375.383-.375.71 0 .224.08.416.24.567.159.152.454.304.877.44l1.134.358c.574.184.99.44 1.237.767.247.327.367.702.367 1.117 0 .343-.072.655-.207.926-.144.272-.336.511-.583.703-.248.2-.543.343-.886.447-.36.111-.734.167-1.142.167zM21.698 16.207c-2.626 1.94-6.442 2.969-9.722 2.969-4.598 0-8.74-1.7-11.87-4.526-.247-.223-.024-.527.272-.351 3.384 1.963 7.559 3.153 11.877 3.153 2.914 0 6.114-.607 9.06-1.852.439-.2.814.287.383.607zM22.792 14.961c-.336-.43-2.22-.207-3.074-.103-.255.032-.295-.192-.063-.36 1.5-1.053 3.967-.75 4.254-.399.287.36-.08 2.826-1.485 4.007-.215.184-.423.088-.327-.151.32-.79 1.03-2.57.695-2.994z" />
+                    </svg> AWS S3
+                  </div>
+                </div>
+                <div class="button-holder">
+                  <button class="enterprise-btn">+ Add New</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="card buildAICart rightside doc">
+          <p class="data">Documents</p>
+          <ul class="doc-list no-scrollbar">
+            <li><span><i class="ri-file-3-line"></i></span> MarketLandscape_Q3.pdf</li>
+            <li><span><i class="ri-file-3-line"></i></span> Pricing_Strategy_v2.pptx</li>
+            <li><span><i class="ri-file-3-line"></i></span> Survey_Responses.xlsx</li>
+            <li><span><i class="ri-file-3-line"></i></span> Requirements_Spec.docx</li>
+            <li><span><i class="ri-file-3-line"></i></span> MarketLandscape_Q3.pdf</li>
+            <li><span><i class="ri-file-3-line"></i></span> Pricing_Strategy_v2.pptx</li>
+            <li><span><i class="ri-file-3-line"></i></span> Survey_Responses.xlsx</li>
+            <li><span><i class="ri-file-3-line"></i></span> Requirements_Spec.docx</li>
+            <li><span><i class="ri-file-3-line"></i></span> MarketLandscape_Q3.pdf</li>
+            <li><span><i class="ri-file-3-line"></i></span> Pricing_Strategy_v2.pptx</li>
+            <li><span><i class="ri-file-3-line"></i></span> Survey_Responses.xlsx</li>
+            <li><span><i class="ri-file-3-line"></i></span> Requirements_Spec.docx</li>
+          </ul>
+          <button class="add-btn">+ Add New</button>
+        </div>
+      </div>
+
+
+
+
+    </section>
+
+    <section class="page" data-page="integrations" hidden>
+      <h2>Integrate Client Systems</h2>
+      <div class="panel grid-2">
+        <label>System Name
+          <input type="text" placeholder="Salesforce / SAP / Slack" />
+        </label>
+        <label>API Key
+          <input type="text" placeholder="Paste API key" />
+        </label>
+        <label>Webhook URL
+          <input type="url" placeholder="https://example.com/webhook" />
+        </label>
+        <label>Status
+          <select>
+            <option>Not Connected</option>
+            <option>Connected</option>
+            <option>Error</option>
+          </select>
+        </label>
+        <button class="primary span-2">Connect System</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> INNOVIZ. All rights reserved.</span>
+    </footer>
+  </main>
+
+  <script src="js/client-dashboard.js"></script>
+</body>
+
+</html>

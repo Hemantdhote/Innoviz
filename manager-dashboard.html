@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INNOVIZ · Manager Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/manager-dashboard.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- App Shell -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <span>INNOVIZ</span>
+      <button class="close-btn" id="closeSidebar">×</button>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-item active" data-page="home">
+        <span class="icon"><i class="ri-dashboard-line"></i></span> <span>Dashboard</span>
+      </button>
+      <button class="nav-item" data-page="init-tech">
+        <span class="icon"><i class="ri-tools-line"></i></span> <span>Projects</span>
+      </button>
+      <button class="nav-item" data-page="customize">
+        <span class="icon"><i class="ri-edit-box-line"></i> </span> <span>Reports</span>
+      </button>
+      <button class="nav-item" data-page="client-admin">
+        <span class="icon"><i class="ri-settings-4-line"></i></span> <span>Settings</span>
+      </button>
+
+    </nav>
+
+    <div class="sidebar-footer">
+      <a class="logout" href="index.html">← Logout</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">☰</button>
+
+
+
+      <div class="top-actions">
+
+        <div class="user">
+          <div class="avatar">A</div>
+          <div class="meta">
+            <span class="name">Admin User</span>
+            <span class="role">System Administrator</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Welcome + Quick Actions -->
+    <section class="welcome" data-page="home">
+  <h1>Welcome, <span class="accent">Manager User</span></h1>
+  <p class="subtitle">Configure your client environment</p>
+
+  <div class="card-grid" id="quickActions">
+
+    <!-- Project Cards -->
+    <div class="project-card" data-open="init-tech">
+      <p>Project Alpha</p>
+      <div class="progresss">
+        <p class="status">Not started</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 0%; background:#ccc;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-open="init-tech">
+      <p>Project Beta</p>
+      <div class="progresss">
+        <p class="status">In setup</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 40%; background:#f9656b;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-open="init-tech">
+      <p>Project Gamma</p>
+      <div class="progresss">
+        <p class="status">Data ready</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 100%; background:#ff863b;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-open="init-tech">
+      <p>Project Delta</p>
+      <div class="progresss">
+        <p class="status">Model training</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 60%; background:#fed428;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-open="init-tech">
+      <p>Project Epsilon</p>
+      <div class="progresss">
+        <p class="status">Closed</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 100%; background:#3edc95;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-open="init-tech">
+      <p>Closed</p>
+      <div class="progresss">
+        <p class="status">Closed</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 100%; background:#0092fe;"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Action Subheading -->
+  <h2 class="action-heading">Quick Actions</h2>
+  <p class="action-subtitle"> Take actions on your projects directly</p>
+  <div class="action-buttons">
+    <button class="action-btn"> <i class="ri-add-line iconadj"></i> Add New Project</button>
+    <button class="action-btn"> <i class="ri-restart-line iconadj"></i> Review Pending Projects</button>
+    <button class="action-btn"> <i class="ri-export-line iconadj"></i>  Export Project Data</button>
+  </div>
+</section>
+
+
+    <!-- Pages (dummy content) -->
+    <section class="page project-section" data-page="init-tech" hidden>
+      <div class="container">
+        <div class="breadcrumbs">
+          <a class="spanPro" href="#">Projects</a> &gt; <span class="spanAlpha">Project Alpha</span>
+        </div>
+        <h2 class="project-title">Project Alpha</h2>
+        <div class="tabs">
+          <button>Overview</button>
+          <button class="active">Phases</button>
+          <button>Documents</button>
+          <button>Enterprise System</button>
+          <button>AI Model</button>
+        </div>
+
+        <h2 class="phase">Phases</h2>
+
+        <div class="phase-card">
+          <div class="phase-title">DISCOVER &amp; DECODE</div>
+          <div class="progress-track">
+            <div class="progress-bar red" style="width:30%"></div>
+          </div>
+        </div>
+
+        <div class="phase-card">
+          <div class="phase-title">DEVELOP &amp; DESIGN</div>
+          <div class="progress-track">
+            <div class="progress-bar orange" style="width:50%"></div>
+          </div>
+        </div>
+
+        <div class="phase-card">
+          <div class="phase-title">DIAGNOSE &amp; DEPLOY</div>
+          <div class="progress-track">
+            <div class="progress-bar green" style="width:80%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" data-page="customize" hidden>
+      <h2>Reports</h2>
+      <div class="panel grid-2">
+        <label>Instance Name
+          <input type="text" placeholder="Client ACME North" />
+        </label>
+        <label>Theme Color
+          <input type="color" value="#009688" />
+        </label>
+        <label>Region
+          <select>
+            <option>US</option>
+            <option>EU</option>
+            <option>APAC</option>
+          </select>
+        </label>
+        <label>Feature Flags
+          <input type="text" placeholder="beta, audit, insights" />
+        </label>
+        <button class="primary span-2">Save Customization</button>
+      </div>
+    </section>
+
+    <section class="page" data-page="client-admin" hidden>
+      <h2>Settings</h2>
+      <div class="panel grid-2">
+        <label>Admin Name
+          <input type="text" placeholder="Jane Doe" />
+        </label>
+        <label>Email
+          <input type="email" placeholder="jane@example.com" />
+        </label>
+        <label>Password
+          <input type="password" placeholder="••••••••" />
+        </label>
+        <label>Role
+          <select>
+            <option>Owner</option>
+            <option>Admin</option>
+            <option>Editor</option>
+          </select>
+        </label>
+        <button class="primary span-2">Create Admin</button>
+      </div>
+    </section>
+
+    <section class="page" data-page="master-prompts" hidden>
+      <h2>Setup Master Prompts</h2>
+      <div class="panel">
+        <label>Phase
+          <select>
+            <option>Discover</option>
+            <option>Diagnose</option>
+            <option>Develop</option>
+          </select>
+        </label>
+        <label>Prompt Text
+          <textarea rows="5" placeholder="Write the master prompt…"></textarea>
+        </label>
+        <button class="primary">Save Prompt</button>
+      </div>
+    </section>
+
+    <section class="page" data-page="integrations" hidden>
+      <h2>Integrate Client Systems</h2>
+      <div class="panel grid-2">
+        <label>System Name
+          <input type="text" placeholder="Salesforce / SAP / Slack" />
+        </label>
+        <label>API Key
+          <input type="text" placeholder="Paste API key" />
+        </label>
+        <label>Webhook URL
+          <input type="url" placeholder="https://example.com/webhook" />
+        </label>
+        <label>Status
+          <select>
+            <option>Not Connected</option>
+            <option>Connected</option>
+            <option>Error</option>
+          </select>
+        </label>
+        <button class="primary span-2">Connect System</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> INNOVIZ. All rights reserved.</span>
+    </footer>
+  </main>
+
+  <script src="js/manager-dashboard.js"></script>
+</body>
+
+</html>

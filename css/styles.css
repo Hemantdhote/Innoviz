@@ -1,0 +1,150 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.logo {
+  color: #F2572B;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.login-title {
+  margin-bottom: 0.3rem;
+  color: #383636;
+}
+
+.login-subtitle {
+  margin-bottom: 1.2rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.login-form input {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+#login-btn {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: #F2572B;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+
+
+.forgot-link {
+  display: block;
+  text-align: right;
+  font-size: 0.85rem;
+  color: blue;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.separator {
+  margin-top: 1rem;
+  border-top: 1px solid #dadada;
+  padding-top: 1rem;
+}
+
+.separator span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  background-color: white;
+  padding: 0 1.5vw;
+  display: inline-block;
+  color: #666;
+  /* color: #444; */
+}
+
+.roles {
+  display: flex;
+  justify-content: space-around;
+  gap: 2vw;
+  margin-top: 2vw;
+}
+
+.role-link {
+  /* color: #009688; */
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.4rem 0.5rem;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  width: 50%;
+  outline: none;
+  border: 1px solid #ccc;
+  color: #666;
+  transition: all ease 0.5s;
+}
+.role-link:hover {
+  color: #009688;
+  border: none;
+  background-color: #00968736;
+}
+
+.role-link.active {
+  background: #009688;
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
+.separator {
+  position: relative;
+  /* background-color:#ccc; */
+}
