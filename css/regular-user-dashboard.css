@@ -625,3 +625,97 @@ h2 {
 .iconadj {
   font-size: 20px;
 }
+
+
+/* Action Items Section */
+.action-items-heading {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.action-items-subtitle {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* Container for all items */
+.action-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Individual item */
+.action-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.action-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Icon */
+.action-item i {
+  font-size: 1.5rem;
+  color: var(--teal);
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+
+/* Text content */
+.action-content h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.action-content p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #777;
+  font-weight: 500;
+  font-family: poppins;
+}
+
+/* Right-hand button */
+.action-link {
+  margin-left: auto;
+  background: transparent;
+  color: var(--teal);
+  border: 1px solid var(--teal);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;           /* vertical padding only */
+  width: 120px;                /* ✅ fixed width */
+  text-align: center;          /* center the text */
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.action-link:hover {
+  background: #0073c0;
+}
+
+/* Mobile: full width still looks nice */
+@media (max-width: 768px) {
+  .action-link {
+    width: 100%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .action-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

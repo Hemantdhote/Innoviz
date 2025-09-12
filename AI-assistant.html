@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,14 +11,47 @@
     rel="stylesheet">
   <link rel="stylesheet" href="css/AI-assistant.css" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <style>
+    /* Chat container header (project info) */
+    .chat-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f5f7fb;
+      border-bottom: 1px solid #e0e4ea;
+      padding: 0.75rem 1rem;
+      border-radius: 0.75rem 0.75rem 0 0; /* rounded top only */
+      margin-bottom: 0.5rem;
+    }
 
+    .chat-header .project-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+      margin: 0;
+    }
+
+    .chat-header .project-phase {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #555;
+      background: #e8f0ff;
+      padding: 0.25rem 0.75rem;
+      border-radius: 1rem;
+    }
+
+    .next-prompt-wrapper {
+      display: flex;
+      justify-content: flex-end; /* right aligned */
+      padding: 0.5rem 0.75rem;
+    }
+  </style>
 </head>
 
 <body>
   <!-- App Shell -->
   <aside class="sidebar" id="sidebar">
     <div class="brand">
-
       <span class="in-logo">INNOVIZ</span>
       <button class="close-btn" id="closeSidebar">×</button>
     </div>
@@ -37,25 +69,17 @@
       <button class="nav-item" data-page="client-admin">
         <span class="icon"><i class="ri-line-chart-line"></i></span> <span>Change AI Model</span>
       </button>
-
     </nav>
 
     <div class="sidebar-footer">
-      <!-- <button class="back-btn" id="backBtn">← Back</button> -->
-
       <a class="logout" href="index.html">← Logout</a>
-
     </div>
   </aside>
 
   <main class="main">
     <header class="topbar">
       <button class="hamburger" id="hamburger" aria-label="Toggle Menu">☰</button>
-
-
-
       <div class="top-actions">
-
         <div class="user">
           <div class="avatar">A</div>
           <div class="meta">
@@ -70,43 +94,51 @@
     <section class="welcome" data-page="home">
       <div class="modelDrop">
         <div>
-          <h1>Ask Your <span class="accent">AI Assitsant</span></h1>
+          <h1>Ask Your <span class="accent">AI Assistant</span></h1>
           <p class="subtitle">It will help you to configure</p>
         </div>
         <div class="subtitle">
           <label for="model">Model In Use:</label>
-        <select class="subtitle" id="model" name="city">
-          <option class="subtitle" value="AI 2.0">AI 2.0</option>
-          <option class="subtitle" value="AI 2.0.0">AI 2.0.0</option>
-          <option class="subtitle" value="AI 2.0.1">AI 2.0.1</option>
-          <option class="subtitle" value="AI 2.0.2">AI 2.0.2</option>
-          <option class="subtitle" value="AI 2.0.3">AI 2.0.3</option>
-        </select>
+          <select class="subtitle" id="model" name="city">
+            <option class="subtitle" value="AI 2.0">AI 2.0</option>
+            <option class="subtitle" value="AI 2.0.0">AI 2.0.0</option>
+            <option class="subtitle" value="AI 2.0.1">AI 2.0.1</option>
+            <option class="subtitle" value="AI 2.0.2">AI 2.0.2</option>
+            <option class="subtitle" value="AI 2.0.3">AI 2.0.3</option>
+          </select>
         </div>
       </div>
 
+      <div class="chat-container">
+        <!-- ✅ Project info at top -->
+          <div class="chat-header">
+            <h2 class="project-name">Project: Alpha</h2>
+            <span class="project-phase">Phase: Develop & Design</span>
+          </div>
 
-
-      <div class="chat-container ">
         <!-- Chat messages -->
         <div class="chat-messages no-scrollbar" id="chatMessages">
           <!-- Messages will appear here dynamically -->
+        </div>
+
+        <!-- ✅ New button just above input area -->
+        <div class="next-prompt-wrapper">
+          <button type="button" id="nextPromptBtn" class="next-prompt-btn">
+            Next Suggested Prompt
+          </button>
         </div>
 
         <!-- Input area -->
         <form class="chat-input-area" id="chatForm">
           <label class="file-upload">
             <i class="ri-add-line"></i>
-            <!-- fileInput -->
-            <input type="file" id="  " hidden multiple>
+            <input type="file" id="fileInput" hidden multiple>
           </label>
           <input type="text" id="messageInput" placeholder="Ask a question..." required />
           <button type="submit">Send</button>
         </form>
       </div>
     </section>
-
-    <!-- Pages (dummy content) -->
 
     <section class="page" data-page="integrations" hidden>
       <h2>Integrate Client Systems</h2>
@@ -138,5 +170,4 @@
 
   <script src="js/AI-assistant.js"></script>
 </body>
-
 </html>

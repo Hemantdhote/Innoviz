@@ -777,3 +777,24 @@ select {
  align-items: center;
  justify-content: space-between;
 }
+
+/* Wrapper to add spacing */
+.next-prompt-wrapper {
+  display: flex;
+  justify-content: flex-end; /* right aligned */
+  padding: 0.5rem 0.75rem;
+}
+
+/* Button style */
+.next-prompt-btn {
+  background: transparent;
+  color: var(--teal);
+  border: 1px solid var(--teal);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+

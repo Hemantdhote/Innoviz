@@ -13,11 +13,11 @@ function updateUI(role) {
 
   // Update heading text dynamically
   if (role === 'client') {
-    title.textContent = 'Log in as Client User';
+    title.textContent = 'Log in as Client Admin';
   } else if (role === 'manager') {
-    title.textContent = 'Log in as Project Manager';
+    title.textContent = 'Log in as Regular User';
   } else if (role === 'admin') {
-    title.textContent = 'Log in as Admin User';
+    title.textContent = 'Log in as Emozo Admin';
   }
   subtitle.textContent = 'Enter your credentials to continue';
 
@@ -55,11 +55,11 @@ loginBtn.addEventListener('click', () => {
   }
 
   if (currentRole === 'admin') {
-    window.location.href = 'admin-dashboard.html';
+    window.location.href = 'emozo-admin-dashboard.html';
   } else if (currentRole === 'manager') {
-    window.location.href = 'manager-dashboard.html';
+    window.location.href = 'regular-user-dashboard.html';
   } else {
-    window.location.href = 'client-dashboard.html';
+    window.location.href = 'client-admin-dashboard.html';
   }
 });
 

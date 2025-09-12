@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>INNOVIZ · Manager Dashboard</title>
+  <title>INNOVIZ · Regular User Dashboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/manager-dashboard.css" />
+  <link rel="stylesheet" href="css/regular-user-dashboard.css" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
@@ -54,7 +54,7 @@
         <div class="user">
           <div class="avatar">A</div>
           <div class="meta">
-            <span class="name">Admin User</span>
+            <span class="name">User</span>
             <span class="role">System Administrator</span>
           </div>
         </div>
@@ -63,7 +63,7 @@
 
     <!-- Welcome + Quick Actions -->
     <section class="welcome" data-page="home">
-      <h1>Welcome, <span class="accent">Manager User</span></h1>
+      <h1>Welcome, <span class="accent">John Deo</span></h1>
       <p class="subtitle">Configure your client environment</p>
 
       <div class="card-grid" id="quickActions">
@@ -133,10 +133,42 @@
       <!-- Action Subheading -->
       <h2 class="action-heading">Quick Actions</h2>
       <p class="action-subtitle"> Take actions on your projects directly</p>
-      <div class="action-buttons">
-        <button class="action-btn"> <i class="ri-add-line iconadj"></i> Add New Project</button>
-        <button class="action-btn"> <i class="ri-restart-line iconadj"></i> Review Pending Projects</button>
-        <button class="action-btn"> <i class="ri-export-line iconadj"></i> Export Project Data</button>
+      <div class="action-list">
+        <div class="action-item">
+          <i class="ri-file-search-line"></i>
+          <div class="action-content">
+            <h4>Review XYZ</h4>
+            <p>Check the submitted report and provide feedback</p>
+          </div>
+          <button class="action-link">Review</button>
+        </div>
+
+        <div class="action-item">
+          <i class="ri-check-double-line"></i>
+          <div class="action-content">
+            <h4>Approve archival of Concept Note ABC</h4>
+            <p>Ensure compliance before approval</p>
+          </div>
+          <button class="action-link">Approve</button>
+        </div>
+
+        <div class="action-item">
+          <i class="ri-discuss-line"></i>
+          <div class="action-content">
+            <h4>Review and comment on task DEF</h4>
+            <p>Leave remarks for the team</p>
+          </div>
+          <button class="action-link">Comment</button>
+        </div>
+
+        <div class="action-item">
+          <i class="ri-time-line"></i>
+          <div class="action-content">
+            <h4>Pending Risk Assessment</h4>
+            <p>Complete assessment before Friday</p>
+          </div>
+          <button class="action-link">Start</button>
+        </div>
       </div>
     </section>
 
@@ -272,7 +304,7 @@
     </footer>
   </main>
 
-  <script src="js/manager-dashboard.js"></script>
+  <script src="js/regular-user-dashboard.js"></script>
 </body>
 
 </html>

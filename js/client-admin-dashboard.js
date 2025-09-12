@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // Simple page switching
-  const navButtons = document.querySelectorAll('.nav-item');
+  const navButtons = document.querySelectorAll('.nav-items');
   const pages = document.querySelectorAll('[data-page]');
 
   function openPage(pageId) {

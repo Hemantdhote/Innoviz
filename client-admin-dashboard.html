@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>INNOVIZ · Client Dashboard</title>
+  <title>INNOVIZ · Client Admin Dashboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/client-dashboard.css" />
+  <link rel="stylesheet" href="css/client-admin-dashboard.css" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
 </head>
@@ -25,7 +25,7 @@
     </div>
 
     <nav class="nav">
-      <button class="nav-item active" data-page="home">
+      <button class="nav-item nav-items active" data-page="home">
         <span class="icon"><i class="ri-dashboard-line"></i></span> <span>Dashboard</span>
       </button>
       <button class="nav-item" data-page="init-tech">
@@ -37,7 +37,7 @@
       <button class="nav-item" data-page="client-admin">
         <span class="icon"><i class="ri-line-chart-line"></i></span> <span>Data Sources & categories</span>
       </button>
-      <button class="nav-item" data-page="master-prompts">
+      <button class="nav-item nav-items" data-page="master-prompts">
         <span class="icon"><i class="ri-robot-3-line"></i></span> <span>Build AI Model</span>
       </button>
       <button class="nav-item" data-page="integrations">
@@ -61,7 +61,7 @@
         <div class="user">
           <div class="avatar">A</div>
           <div class="meta">
-            <span class="name">Admin User</span>
+            <span class="name">Client Admin</span>
             <span class="role">System Administrator</span>
           </div>
         </div>
@@ -70,7 +70,7 @@
 
     <!-- Welcome + Quick Actions -->
     <section class="welcome" data-page="home">
-      <h1>Welcome, <span class="accent">Client User</span></h1>
+      <h1>Welcome, <span class="accent">Client Admin</span></h1>
       <p class="subtitle">Configure your client environment</p>
 
       <div class="card-grid" id="quickActions">
@@ -86,13 +86,9 @@
 
         </article>
 
-        <article class="nav-item card" data-page="client-admin">
-          <div class="card-icon"><i class="ri-edit-box-line"></i></div>
-          <p>Create Client Admin</p>
+        
 
-        </article>
-
-        <article class="nav-item card" data-page="master-prompts">
+        <article class="nav-item nav-items card" data-page="master-prompts">
           <div class="card-icon"><i class="ri-robot-3-line"></i></div>
           <p>Build AI Model</p>
 
@@ -342,7 +338,7 @@
     </footer>
   </main>
 
-  <script src="js/client-dashboard.js"></script>
+  <script src="js/client-admin-dashboard.js"></script>
 </body>
 
 </html>
